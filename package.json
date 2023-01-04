@@ -1,22 +1,25 @@
 {
-  "name": "eslint-config-sharable",
-  "version": "1.0.0",
-  "description": "Sharable Config of ESLint ",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/massalabs/eslint-config.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/massalabs/eslint-config/issues"
-  },
-  "homepage": "https://github.com/massalabs/eslint-config#readme",
-  "peerDependencies": {
-    "eslint": ">= 3"
-}
+	"name": "@massalabs/eslint-config",
+	"version": "1.0.0",
+	"description": "Sharable Config of ESLint for MassaLabs",
+	"main": "index.js",
+	"scripts": {},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/massalabs/eslint-config.git"
+	},
+	"author": "MassaLabs",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/massalabs/eslint-config/issues"
+	},
+	"homepage": "https://github.com/massalabs/eslint-config#readme",
+	"peerDependencies": {
+		"eslint": ">= 3"
+	},
+	"keywords": [
+		"massa",
+		"eslint",
+		"config"
+	]
 }
