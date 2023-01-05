@@ -10,7 +10,6 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'google',
     'prettier',
-    'eslint-config-sharable',
   ],
   parserOptions: {
     ecmaVersion: 2020,

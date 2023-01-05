@@ -1,7 +1,7 @@
 {
 	"name": "@massalabs/eslint-config",
-	"version": "0.0.1",
-	"description": "Sharable Config of ESLint for MassaLabs",
+	"version": "0.0.2",
+	"description": "Shareable Config of ESLint for MassaLabs",
 	"main": "index.js",
 	"scripts": {
 		"fmt": "prettier --write *.js"
