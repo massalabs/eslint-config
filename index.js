@@ -100,6 +100,15 @@ module.exports = {
       // === TypeScript rules ====================================================
   
       {
+        files: ['**/*.ts'], rules: {    
+        // Disable jsdoc
+        'require-jsdoc': 'off',
+        'valid-jsdoc': 'off',
+        // Enable typedoc
+        'tsdoc/syntax': 'error',
+        }
+      },
+      {
         files: ['**/assembly/**/*.ts'],
         rules: {
           // Enforcing to remove function parameters on stubs makes code less
@@ -128,12 +137,6 @@ module.exports = {
   
           // Type conversions require an explicit cast in AssemblyScript.
           '@typescript-eslint/no-unnecessary-type-assertion': 'off',
-  
-          // Disable jsdoc
-          'require-jsdoc': 'off',
-          'valid-jsdoc': 'off',
-          // Enable typedoc
-          'tsdoc/syntax': 'error',
         },
       },
   
