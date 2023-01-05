@@ -3,11 +3,14 @@
 	"version": "1.0.0",
 	"description": "Sharable Config of ESLint for MassaLabs",
 	"main": "index.js",
-	"scripts": {},
+	"scripts": {
+		"fmt": "prettier --write *.js"
+	},
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/massalabs/eslint-config.git"
 	},
+	"prettier": "@massalabs/prettier-config-as",
 	"author": "MassaLabs",
 	"license": "ISC",
 	"bugs": {
@@ -21,5 +24,8 @@
 		"massa",
 		"eslint",
 		"config"
-	]
+	],
+	"devDependencies": {
+		"@massalabs/prettier-config-as": "^0.0.2"
+	}
 }
