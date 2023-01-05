@@ -1,6 +1,6 @@
 {
 	"name": "@massalabs/eslint-config",
-	"version": "1.0.0",
+	"version": "0.0.1",
 	"description": "Sharable Config of ESLint for MassaLabs",
 	"main": "index.js",
 	"scripts": {
@@ -17,7 +17,7 @@
 		"url": "https://github.com/massalabs/eslint-config/issues"
 	},
 	"homepage": "https://github.com/massalabs/eslint-config#readme",
-	"peerDependencies": {
+	"dependencies": {
 		"eslint": ">= 8",
 		"eslint-config-google": "^0.14.0",
 		"eslint-config-prettier": "^8.5.0",
