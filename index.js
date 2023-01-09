@@ -2,7 +2,7 @@ module.exports = {
   root: true,
   parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint/eslint-plugin', 'eslint-plugin-tsdoc'],
-  ignorePatterns: ['assembly/abi.ts', 'docs/**'],
+  ignorePatterns: ['docs/**', '**/dist/**', '**/build/**'],
   extends: [
     'eslint:recommended',
     'plugin:json/recommended',
