@@ -4,7 +4,7 @@ module.exports = {
   root: true,
   parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint/eslint-plugin', 'eslint-plugin-tsdoc'],
-  ignorePatterns: ['docs/**', '**/dist/**', '**/build/**', '**/as-pect.config.js'],
+  ignorePatterns: ['**/docs/**', '**/dist/**', '**/build/**', '**/as-pect.config.js'],
   extends: [
     'eslint:recommended',
     'plugin:json/recommended',
