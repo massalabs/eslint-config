@@ -1,10 +1,15 @@
-const { configs } = require("eslint-plugin-json");
+const { configs } = require('eslint-plugin-json');
 
 module.exports = {
   root: true,
   parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint/eslint-plugin', 'eslint-plugin-tsdoc'],
-  ignorePatterns: ['**/docs/**', '**/dist/**', '**/build/**', '**/as-pect.config.js'],
+  ignorePatterns: [
+    '**/docs/**',
+    '**/dist/**',
+    '**/build/**',
+    '**/as-pect.config.js',
+  ],
   extends: [
     'eslint:recommended',
     'plugin:json/recommended',
@@ -93,17 +98,28 @@ module.exports = {
 
     // Allow us to use 0xffffffffffffffff for edge case tests
     '@typescript-eslint/no-loss-of-precision': 'warn',
+
+    'require-jsdoc': 'error',
   },
   overrides: [
+    // === JavaScript rules ====================================================
+
+    // jsdoc rules
+    {
+      files: ['**/*.js'],
+      rules: {
+        'valid-jsdoc': 'error',
+        'tsdoc/syntax': 'off',
+      },
+    },
+
     // === TypeScript rules ====================================================
 
+    // tsdoc rules
     {
       files: ['**/*.ts'],
       rules: {
-        // Disable jsdoc
-        'require-jsdoc': 'off',
         'valid-jsdoc': 'off',
-        // Enable typedoc
         'tsdoc/syntax': 'error',
       },
     },
