@@ -1,9 +1,12 @@
-const { configs } = require('eslint-plugin-json');
-
 module.exports = {
   root: true,
   parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint/eslint-plugin', 'eslint-plugin-tsdoc'],
+  plugins: [
+    '@typescript-eslint/eslint-plugin',
+    'eslint-plugin-tsdoc',
+    'jsdoc',
+    'json',
+  ],
   ignorePatterns: [
     '**/docs/**',
     '**/dist/**',
@@ -99,7 +102,9 @@ module.exports = {
     // Allow us to use 0xffffffffffffffff for edge case tests
     '@typescript-eslint/no-loss-of-precision': 'warn',
 
-    'require-jsdoc': 'error',
+    // disable deprecated rules
+    'valid-jsdoc': 'off',
+    'require-jsdoc': 'off',
   },
   overrides: [
     // === JavaScript rules ====================================================
@@ -108,9 +113,9 @@ module.exports = {
     {
       files: ['**/*.js'],
       rules: {
-        'valid-jsdoc': 'error',
         'tsdoc/syntax': 'off',
       },
+      extends: ['plugin:jsdoc/recommended'],
     },
 
     // === TypeScript rules ====================================================
@@ -119,7 +124,6 @@ module.exports = {
     {
       files: ['**/*.ts'],
       rules: {
-        'valid-jsdoc': 'off',
         'tsdoc/syntax': 'error',
       },
     },
