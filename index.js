@@ -180,6 +180,8 @@ module.exports = {
         // Different behavior in AssemblyScript.
         // https://www.assemblyscript.org/basics.html#triple-equals
         eqeqeq: 'off',
+
+        'new-cap': ["error", { "capIsNewExceptions": ["ERROR"] }]
       },
     },
 
