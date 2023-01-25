@@ -24,6 +24,7 @@
 		"eslint-config-google": "^0.14.0",
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-plugin-json": "^3.1.0",
+		"eslint-plugin-jsdoc": "^39.6.8",
 		"eslint-plugin-tsdoc": "^0.2.17"
 	},
 	"keywords": [
@@ -32,7 +33,6 @@
 		"config"
 	],
 	"devDependencies": {
-		"@massalabs/prettier-config-as": "^0.0.2",
-		"eslint-plugin-jsdoc": "^39.6.8"
+		"@massalabs/prettier-config-as": "^0.0.2"
 	}
 }
