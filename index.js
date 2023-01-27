@@ -181,7 +181,7 @@ module.exports = {
         // https://www.assemblyscript.org/basics.html#triple-equals
         eqeqeq: 'off',
 
-        'new-cap': ["error", { "capIsNewExceptions": ["ERROR"] }]
+        'new-cap': ['error', { capIsNewExceptions: ['ERROR'] }],
       },
     },
 
@@ -228,7 +228,6 @@ module.exports = {
         'no-constant-condition': 'off',
         'use-isnan': 'off',
         '@typescript-eslint/no-namespace': 'off',
-        '@typescript-eslint/no-unused-vars': 'off',
         '@typescript-eslint/no-empty-function': 'off',
         '@typescript-eslint/no-non-null-assertion': 'off',
         '@typescript-eslint/no-extra-semi': 'off',
