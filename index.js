@@ -114,6 +114,7 @@ module.exports = {
       files: ['**/*.js'],
       rules: {
         'tsdoc/syntax': 'off',
+        'no-unused-vars': 'warn',
       },
       extends: ['plugin:jsdoc/recommended'],
     },
@@ -136,8 +137,8 @@ module.exports = {
           'warn',
           {
             vars: 'local',
-            varsIgnorePattern: '^_|^[A-Z](?:From|To)?$', // ignore type params
-            args: 'none',
+            argsIgnorePattern: '^_|^[A-Z](?:From|To)?$', // ignore type params
+            args: 'all',
             ignoreRestSiblings: false,
           },
         ],
