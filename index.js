@@ -105,6 +105,10 @@ module.exports = {
     // disable deprecated rules
     'valid-jsdoc': 'off',
     'require-jsdoc': 'off',
+
+    // console rules
+    'no-console': 'error',
+    'no-debugger': 'error',
   },
   overrides: [
     // === JavaScript rules ====================================================
@@ -117,6 +121,14 @@ module.exports = {
         'no-unused-vars': 'warn',
       },
       extends: ['plugin:jsdoc/recommended'],
+      overrides: [
+        {
+          files: ['**/*.test.{js,ts,tsx}', '**/*.stories.{js,ts,tsx}'],
+          rules: {
+            'no-console': 'off',
+          },
+        },
+      ],
     },
 
     // === TypeScript rules ====================================================
@@ -157,6 +169,24 @@ module.exports = {
 
         // Type conversions require an explicit cast in AssemblyScript.
         '@typescript-eslint/no-unnecessary-type-assertion': 'off',
+      },
+    },
+
+    // === Jest unit test rules ===========================================================
+
+    {
+      files: ['**/*.test.{js,ts,tsx}'],
+      rules: {
+        'no-console': 'off',
+      },
+    },
+
+    // === Storybook rules ===========================================================
+
+    {
+      files: ['**/*.stories.{js,ts,tsx}'],
+      rules: {
+        'no-console': 'off',
       },
     },
 
