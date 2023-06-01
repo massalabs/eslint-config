@@ -115,8 +115,18 @@ module.exports = {
       rules: {
         'tsdoc/syntax': 'off',
         'no-unused-vars': 'warn',
+        'no-console': 'error',
+        'no-debugger': 'error',
       },
       extends: ['plugin:jsdoc/recommended'],
+      overrides: [
+        {
+          files: ['**/*.test.{js,ts,tsx}', '**/*.stories.{js,ts,tsx}'],
+          rules: {
+            'no-console': 'off',
+          },
+        },
+      ],
     },
 
     // === TypeScript rules ====================================================
@@ -126,7 +136,17 @@ module.exports = {
       files: ['**/*.ts'],
       rules: {
         'tsdoc/syntax': 'error',
+        'no-console': 'error',
+        'no-debugger': 'error',
       },
+      overrides: [
+        {
+          files: ['**/*.test.{js,ts,tsx}', '**/*.stories.{js,ts,tsx}'],
+          rules: {
+            'no-console': 'off',
+          },
+        },
+      ],
     },
     {
       files: ['**/assembly/**/*.ts'],
