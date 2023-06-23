@@ -33,6 +33,8 @@ module.exports = {
   // === General rules =========================================================
 
   rules: {
+    // allow non uppercase first letter for classes. (needed for as-bignum)
+    'new-cap': ['error', { newIsCap: false }],
     'max-len': ['error', 120],
     // Omitted semicolons are hugely popular, yet within the compiler it makes
     // sense to be better safe than sorry.
