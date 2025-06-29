@@ -1,12 +1,7 @@
 module.exports = {
   root: true,
   parser: '@typescript-eslint/parser',
-  plugins: [
-    '@typescript-eslint/eslint-plugin',
-    'eslint-plugin-tsdoc',
-    'jsdoc',
-    'json',
-  ],
+  plugins: ['@typescript-eslint/eslint-plugin', 'json'],
   ignorePatterns: [
     '**/docs/**',
     '**/dist/**',
@@ -104,76 +99,11 @@ module.exports = {
     // Allow us to use 0xffffffffffffffff for edge case tests
     '@typescript-eslint/no-loss-of-precision': 'warn',
 
-    // disable deprecated rules
-    'valid-jsdoc': 'off',
-    'require-jsdoc': 'off',
-
     // console rules
     'no-console': 'error',
     'no-debugger': 'error',
   },
   overrides: [
-    // === JavaScript rules ====================================================
-
-    // jsdoc rules
-    {
-      files: ['**/*.js'],
-      rules: {
-        'tsdoc/syntax': 'off',
-        'no-unused-vars': 'warn',
-      },
-      extends: ['plugin:jsdoc/recommended'],
-      overrides: [
-        {
-          files: ['**/*.test.{js,ts,tsx}', '**/*.stories.{js,ts,tsx}'],
-          rules: {
-            'no-console': 'off',
-          },
-        },
-      ],
-    },
-
-    // === TypeScript rules ====================================================
-
-    // tsdoc rules
-    {
-      files: ['**/*.ts'],
-      rules: {
-        'tsdoc/syntax': 'error',
-      },
-    },
-    {
-      files: ['**/assembly/**/*.ts'],
-      rules: {
-        // Enforcing to remove function parameters on stubs makes code less
-        // maintainable, so we instead allow unused function parameters.
-        '@typescript-eslint/no-unused-vars': [
-          'warn',
-          {
-            vars: 'local',
-            argsIgnorePattern: '^_|^[A-Z](?:From|To)?$', // ignore type params
-            args: 'all',
-            ignoreRestSiblings: false,
-          },
-        ],
-
-        // Namespaces are quite useful in AssemblyScript
-        '@typescript-eslint/no-namespace': 'off',
-
-        // There is actually codegen difference here
-        '@typescript-eslint/no-array-constructor': 'off',
-
-        // Sometimes it can't be avoided to add a @ts-ignore
-        '@typescript-eslint/ban-ts-comment': 'off',
-
-        // Utilized to achieve portability in some cases
-        '@typescript-eslint/no-non-null-assertion': 'off',
-
-        // Type conversions require an explicit cast in AssemblyScript.
-        '@typescript-eslint/no-unnecessary-type-assertion': 'off',
-      },
-    },
-
     // === Jest unit test rules ===========================================================
 
     {
