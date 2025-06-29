@@ -23,7 +23,7 @@
 		"eslint": ">= 8",
 		"eslint-config-google": "^0.14.0",
 		"eslint-config-prettier": "^8.5.0",
-		"eslint-plugin-json": "^3.1.0",
+		"eslint-plugin-json": "^3.1.0"
 	},
 	"keywords": [
 		"massa",
