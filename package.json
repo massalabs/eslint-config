@@ -1,6 +1,6 @@
 {
 	"name": "@massalabs/eslint-config",
-	"version": "0.0.11",
+	"version": "0.0.12",
 	"description": "Shareable Config of ESLint for MassaLabs",
 	"main": "index.js",
 	"scripts": {
@@ -23,9 +23,7 @@
 		"eslint": ">= 8",
 		"eslint-config-google": "^0.14.0",
 		"eslint-config-prettier": "^8.5.0",
-		"eslint-plugin-jsdoc": "^48.0.4",
 		"eslint-plugin-json": "^3.1.0",
-		"eslint-plugin-tsdoc": "^0.2.17"
 	},
 	"keywords": [
 		"massa",
